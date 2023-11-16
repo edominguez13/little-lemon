@@ -57,7 +57,7 @@ ROOT_URLCONF = 'LittleLemon.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates'], # Added in 1st Week 3rd Section 'Static Content' 3rd element 'Reading: Setting up the static routes'
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
