@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # Toolkits and Packages
+    'rest_framework',
     # Custom APPs
     'RestaurantAPP',
 ]
