@@ -22,5 +22,5 @@ from rest_framework.routers import DefaultRouter
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('restaurant/', include('RestaurantAPP.urls')),
-
+    path('__debug__/', include('debug_toolbar.urls')),
 ]
