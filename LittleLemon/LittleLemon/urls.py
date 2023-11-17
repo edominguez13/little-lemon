@@ -23,9 +23,14 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('restaurant/', include('RestaurantAPP.urls')),
     path('__debug__/', include('debug_toolbar.urls')),
+
+    # Auth handlers
     path('api-token-auth/', obtain_auth_token), # used to send a 'POST' request with username and password to retrieve a authenticated token 
-    path('menu/', include('MenuAPI.urls')),
-    path('booking/', include('BookingAPI.urls')),
     path('auth/', include('djoser.urls')), 
     path('auth/', include('djoser.urls.authtoken')),
+    
+    # APIs
+    path('menu/', include('MenuAPI.urls')),
+    path('booking/', include('BookingAPI.urls')),
+    path('api/', include('LittleLemonAPI.urls')),
 ]

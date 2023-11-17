@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'RestaurantAPP',
     'MenuAPI',
     'BookingAPI',
+    'LittleLemonAPI',
 ]
 
 MIDDLEWARE = [
