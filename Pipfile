@@ -8,6 +8,7 @@ django = "*"
 pymysql = "*"
 djangorestframework = "*"
 django-debug-toolbar = "*"
+djangorestframework-xml = "*"
 
 [dev-packages]
 
