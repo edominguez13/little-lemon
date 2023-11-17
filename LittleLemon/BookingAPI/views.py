@@ -15,9 +15,9 @@ from .serializers import BookingSerializer
 class BookingViewSet(generics.ListCreateAPIView):
     queryset = Booking.objects.all()
     serializer_class = BookingSerializer
-    #permission_classes = [permissions.IsAuthenticated] 
+    permission_classes = [permissions.IsAuthenticated] 
 
 class SingleBookingView(generics.RetrieveUpdateAPIView, generics.DestroyAPIView):
     queryset = Booking.objects.all()
     serializer_class = BookingSerializer
-    #permission_classes = [permissions.IsAuthenticated] 
+    permission_classes = [permissions.IsAuthenticated] 

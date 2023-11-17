@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken', # after runing migrations it creates the table structure required to hold the generated tokens
     'debug_toolbar',
+    'djoser',
     # Custom APPs
     'RestaurantAPP',
     'MenuAPI',
@@ -161,9 +162,17 @@ REST_FRAMEWORK = {
     ],
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework.authentication.TokenAuthentication',
+        'rest_framework.authentication.SessionAuthentication', # this should be removed before production
+        # purpose of the above line to be able to use admin login and the djoser browsable api simultaneously
     ],
     # 'DEFAULT_THORTTLE_RATES': {
     #     'anon':'2/minute',
     #     'user':'5/minute',
     # }
+}
+
+
+DJOSER = {
+    'USER_ID_FIELD' : 'username', # you can select email instead by adding the next line
+    #'LOGIN_FIELD' : 'email', # with this the login primary key will be the email instead of username
 }
